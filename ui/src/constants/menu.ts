@@ -15,33 +15,24 @@ export interface MenuItemTypes {
 
 const MENU_ITEMS: MenuItemTypes[] = [
 	{
-		key: 'navigation',
-		label: 'Navigation',
-		isTitle: true,
-	},
-	{
 		key: 'dashboard',
 		label: 'Dashboards',
-		isTitle: false,
+		isTitle: true,
 		icon: 'ri-home-4-line',
 		badge: {
 			variant: 'bg-success rounded-full',
 			text: '2',
 		},
-		children: [
-			{
-				key: 'dashboard-analytics',
-				label: 'Analytics',
-				url: '/analytics',
-				parentKey: 'dashboard',
-			},
-			{
-				key: 'dashboard-ecommerce',
-				label: 'Ecommerce',
-				url: '/ecommerce',
-				parentKey: 'dashboard',
-			},
-		],
+	},
+	{
+		key: 'dashboard-analytics',
+		label: 'Analytics',
+		url: '/analytics',
+	},
+	{
+		key: 'dashboard-home',
+		label: 'Home',
+		url: '/home',
 	},
 	{
 		key: 'apps',

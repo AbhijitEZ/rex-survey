@@ -23,7 +23,7 @@ const LockScreen2 = React.lazy(() => import('../pages/auth2/LockScreen2'))
 const ConfirmMail2 = React.lazy(() => import('../pages/auth2/ConfirmMail2'))
 
 // dashboard
-const Ecommerce = React.lazy(() => import('../pages/dashboard/ecommerce/'))
+const Home = React.lazy(() => import('../pages/dashboard/home'))
 const Analytics = React.lazy(() => import('../pages/dashboard/Analytics/'))
 
 // apps
@@ -147,13 +147,13 @@ const dashboardRoutes: RoutesProps = {
 		{
 			path: '/',
 			name: 'Root',
-			element: <Navigate to="/ecommerce" />,
+			element: <Navigate to="/home" />,
 			route: PrivateRoute,
 		},
 		{
-			path: '/ecommerce',
-			name: 'Ecommerce',
-			element: <Ecommerce />,
+			path: '/home',
+			name: 'Home',
+			element: <Home />,
 			route: PrivateRoute,
 		},
 		{

@@ -1,4 +1,3 @@
-import ReactApexCharts from 'react-apexcharts'
 import { ApexOptions } from 'apexcharts'
 
 interface StatisticsWidgetProps {
@@ -9,36 +8,10 @@ interface StatisticsWidgetProps {
 	stats: string
 	dataSince: string
 	classname: string
-	chartSeries: number[]
-	colors: string[]
+	icon?: string
 }
 
-const StatisticsWidget = ({ variant, cardTitle, title, stats, change, dataSince, classname, chartSeries, colors }: StatisticsWidgetProps) => {
-	const apexOpts: ApexOptions = {
-		chart: {
-			height: 72,
-			width: 72,
-			type: 'donut',
-		},
-		legend: {
-			show: false,
-		},
-		plotOptions: {
-			pie: {
-				donut: {
-					size: '80%',
-				},
-			},
-		},
-		stroke: {
-			colors: ['transparent'],
-		},
-		dataLabels: {
-			enabled: false,
-		},
-		colors: colors,
-	}
-
+const StatisticsWidget = ({ variant, icon, cardTitle, title, stats, change, dataSince }: StatisticsWidgetProps) => {
 	return (
 		<div className="card">
 			<div className="p-6">
@@ -57,7 +30,7 @@ const StatisticsWidget = ({ variant, cardTitle, title, stats, change, dataSince,
 						</p>
 					</div>
 					<div className="shrink">
-						<ReactApexCharts className={classname} options={apexOpts} series={chartSeries} type="donut" width={95} height={95} />
+						<i className={`${icon ? icon : 'ri-star-line'} text-6xl ms-1`}></i>
 					</div>
 				</div>
 			</div>
