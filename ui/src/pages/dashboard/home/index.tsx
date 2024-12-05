@@ -15,6 +15,7 @@ const Ecommerce = () => {
 
 			<div className="grid lg:grid-cols-2 gap-6 mb-6">
 				<Surveys />
+				{/* CHECK: remove? */}
 				<TopSellingProducts products={products} />
 			</div>
 		</>
