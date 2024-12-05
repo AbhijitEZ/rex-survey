@@ -8,7 +8,6 @@ interface PageTitleProps {
 }
 
 const PageBreadcrumb = ({ subName, title, addedChild }: PageTitleProps) => {
-	const breadcrumbItems = ['Attex', subName, title]
 	return (
 		<>
 			<Helmet>
