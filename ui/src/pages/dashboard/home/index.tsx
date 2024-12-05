@@ -7,7 +7,7 @@ import { PageBreadcrumb } from '../../../components'
 import { products } from './data'
 import Surveys from './components/Surveys'
 
-const Ecommerce = () => {
+const Home = () => {
 	return (
 		<>
 			<PageBreadcrumb title="Home" subName="Menu" />
@@ -22,4 +22,4 @@ const Ecommerce = () => {
 	)
 }
 
-export default Ecommerce
+export default Home

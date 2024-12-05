@@ -1,4 +1,4 @@
-import StatisticsWidget from './StatisticsWidget'
+import StatisticsWidget from '../../../../components/StatisticsWidget'
 
 const Statistics = () => {
 	return (

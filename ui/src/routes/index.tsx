@@ -3,6 +3,7 @@ import { Navigate, Route, RouteProps } from 'react-router-dom'
 
 // components
 import PrivateRoute from './PrivateRoute'
+import ProfilePanel from '@/pages/dashboard/profile-panel'
 
 // lazy load all the views
 
@@ -154,6 +155,12 @@ const dashboardRoutes: RoutesProps = {
 			path: '/home',
 			name: 'Home',
 			element: <Home />,
+			route: PrivateRoute,
+		},
+		{
+			path: '/profile-panel',
+			name: 'ProfilePanel',
+			element: <ProfilePanel />,
 			route: PrivateRoute,
 		},
 		{
