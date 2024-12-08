@@ -3,7 +3,6 @@ import { Navigate, Route, RouteProps } from 'react-router-dom'
 
 // components
 import PrivateRoute from './PrivateRoute'
-import ProfilePanel from '@/pages/dashboard/profile-panel'
 
 // lazy load all the views
 
@@ -25,6 +24,8 @@ const ConfirmMail2 = React.lazy(() => import('../pages/auth2/ConfirmMail2'))
 
 // dashboard
 const Home = React.lazy(() => import('../pages/dashboard/home'))
+const ProfilePanel = React.lazy(() => import('../pages/dashboard/profile-panel'))
+const History = React.lazy(() => import('../pages/dashboard/history'))
 const Analytics = React.lazy(() => import('../pages/dashboard/Analytics/'))
 
 // apps
@@ -161,6 +162,12 @@ const dashboardRoutes: RoutesProps = {
 			path: '/profile-panel',
 			name: 'ProfilePanel',
 			element: <ProfilePanel />,
+			route: PrivateRoute,
+		},
+		{
+			path: '/history',
+			name: 'History',
+			element: <History />,
 			route: PrivateRoute,
 		},
 		{
